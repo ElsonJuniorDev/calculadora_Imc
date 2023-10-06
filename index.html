@@ -5,41 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Calculadora - Imc</title>
+    
 </head>
-<body>
+<body >
     <div id="container-main" class="container-main">
         <section id="container-img" class="container-img">
             <img src="assets/img/personal.svg" alt="Imagem atletas">
         </section>
-        <section id="container-form" class="container-form">
-            
+
+        <section id="container-form" class="container-form">            
             <form id="form" class="form">
-                <h1>Calculadora de Imc</h1>
+                <h1 >Calculadora de Imc</h1>
+
                 <label for="weigth">Peso em Kg</label>   
                 <div>                                 
                     <i class="fa-solid fa-weight-scale" style="color: #6c63ff;"></i>
-                    <input id="weigth" type="number" required placeholder="KG">    
-                   
+                    <input id="weigth" type="number" required placeholder="Seu peso em Kg">                     
                 </div>
-                <label for="heigth">Altura em Metros</label>
+
+                <label for="heigth" >Altura em Metros</label>
                 <div>
                     <i class="fa-solid fa-ruler" style="color: #6c63ff;"></i>
-                    <input id="heigth" type="number" required placeholder="Metros">
+                    <input id="heigth" type="number" pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"  required placeholder="Sua altura em Metros">
                 </div>             
                 
-                <button class="calcular">Calcular</button>
+                <button class="calcular" >Calcular</button>
 
-                <div id="more-info" class="more-info">
+                <div id="more-info">      
+                    <main id="imc-container" class="hidden">
+                    <section id="imc-info">
+                        <p>Seu Imc é de: <span id="value"></span></p>
+                        <h3 id="info-Result"></h3>                    
+                    </section>
+                    </main>
                     <a href="https://pt.wikipedia.org/wiki/Índice_de_massa_corporal" target="_blank" rel="Mais informações sobre Imc">
                         Mais Informações sobre o IMC
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color: #6c63ff;"></i>
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="color: #6c63ff;"></i>
                     </a>
                 </div>
-            </form>
- 
-        </section>
-        
+
+            </form> 
+        </section>        
     </div>
 <script src="assets/js/script.js"></script>    
     
